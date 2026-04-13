@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NsDepCopConfig>
+    <Allowed From="*" To="*" />
+
+    <Disallowed From="CoffeeBeans.backend.Web.Domain.*"
+				To="CoffeeBeans.backend.Web.Infrastructure.*" />
+    
+    <Disallowed From="CoffeeBeans.backend.Web.CartFeatures.*"
+				To="CoffeeBeans.backend.Web.Infrastructure.*" />
+    
+    <Disallowed From="CoffeeBeans.backend.Web.ProductFeatures.*"
+				To="CoffeeBeans.backend.Web.Infrastructure.*" />
+    
+    <Disallowed From="CoffeeBeans.backend.Web.Domain.OrderAggregate.*"
+				To="CoffeeBeans.backend.Web.Domain.CartAggregate.*" />
+
+    <AnalyzerConfig>
+        <IssueKind Name="IllegalDependency" Severity="Error" />
+    </AnalyzerConfig>
+</NsDepCopConfig>

@@ -1,0 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+
+namespace CoffeeBeans.backend.Web.Infrastructure.Data;
+
+public static class AppDbContextExtensions
+{
+  public static void AddApplicationDbContext(this IServiceCollection services, string connectionString) =>
+    services.AddDbContext<AppDbContext>(options =>
+         options.UseMySQL(connectionString));
+
+}
